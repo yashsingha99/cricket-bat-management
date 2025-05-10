@@ -1,0 +1,44 @@
+<%- include('layouts/main', { body: ` <div class="row mt-4">
+    <div class="col-md-12">
+        <h1>Dashboard</h1>
+        <p class="lead">Welcome to your dashboard, <%= name %>
+        </p>
+        <div class="card">
+            <div class="card-header">
+                <h4>Quick Actions</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">View All Bats</h5>
+                                <p class="card-text">Browse the complete inventory of cricket bats.</p>
+                                <a href="/bats" class="btn btn-primary">Browse</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Add New Bat</h5>
+                                <p class="card-text">Add a new cricket bat to the inventory.</p>
+                                <a href="/bats/new" class="btn btn-success">Add Bat</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Account Settings</h5>
+                                <p class="card-text">View and update your account settings.</p>
+                                <a href="#" class="btn btn-secondary">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    ` }) %>

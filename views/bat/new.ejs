@@ -1,0 +1,50 @@
+<%- include('../layouts/main', { body: ` <div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h3>Add New Cricket Bat</h3>
+            </div>
+            <div class="card-body">
+                <form action="/bats" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="brandName" class="form-label">Brand Name</label>
+                        <input type="text" id="brandName" name="brandName" class="form-control"
+                            placeholder="Enter Brand Name"
+                            value="<%= typeof brandName != 'undefined' ? brandName : '' %>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price (₹)</label>
+                        <input type="number" id="price" name="price" class="form-control" placeholder="Enter Price"
+                            value="<%= typeof price != 'undefined' ? price : '' %>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="desc" class="form-label">Description</label>
+                        <textarea id="desc" name="desc" class="form-control" rows="4" placeholder="Enter Description"
+                            required><%= typeof desc != 'undefined' ? desc : '' %></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="brandAmbassador" class="form-label">Brand Ambassador</label>
+                        <input type="text" id="brandAmbassador" name="brandAmbassador" class="form-control"
+                            placeholder="Enter Brand Ambassador"
+                            value="<%= typeof brandAmbassador != 'undefined' ? brandAmbassador : '' %>" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Image</label>
+                        <input type="file" id="image" name="image" class="form-control" required>
+                        <small class="text-muted">Only images (jpeg, jpg, png, gif) are allowed. Max size: 1MB</small>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Add Bat</button>
+                        <a href="/bats" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    ` }) %>

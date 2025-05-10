@@ -1,0 +1,45 @@
+<%- include('../layouts/main', { body: ` <div class="row">
+    <div class="col-md-8">
+        <h1>Cricket Bats</h1>
+    </div>
+    <% if(locals.user) { %>
+        <div class="col-md-4 text-end">
+            <a href="/bats/new" class="btn btn-primary">Add New Bat</a>
+        </div>
+        <% } %>
+            </div>
+
+            <% if(bats && bats.length> 0) { %>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                    <% bats.forEach(function(bat) { %>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="<%= bat.image %>" class="card-img-top" alt="<%= bat.brandName %>"
+                                    style="height: 200px; object-fit: cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= bat.brandName %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <%= bat.desc.substring(0, 100) %>...
+                                    </p>
+                                    <p class="card-text"><strong>Price:</strong> ₹<%= bat.price %>
+                                    </p>
+                                    <p class="card-text"><strong>Brand Ambassador:</strong>
+                                        <%= bat.brandAmbassador %>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="/bats/<%= bat._id %>" class="btn btn-info">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+                <% } else { %>
+                    <div class="alert alert-info mt-4">
+                        No bats found. <% if(locals.user) { %><a href="/bats/new">Add a new bat</a>
+                            <% } %>
+                    </div>
+                    <% } %>
+                        ` }) %>

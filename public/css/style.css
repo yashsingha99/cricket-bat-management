@@ -1,0 +1,65 @@
+/* Custom Styles for Cricket Bat Management System */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for dashboard cards */
+.dashboard-card {
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Custom styles for bat cards */
+.bat-card {
+    height: 100%;
+}
+
+.bat-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-bottom: 20px;
+    } }
