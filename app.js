@@ -55,7 +55,7 @@ app.use((req, res, next) => {
 // Routes
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
-app.use('/bats', require('./routes/bats'));
+app.use('/bats', require('./routes/bat'));
 
 // Handle 404
 app.use((req, res) => {
